@@ -1,0 +1,225 @@
+:root{
+    --black:#000;
+    --white:#fff;
+    --yellow:#ffcc33;
+}
+html{
+    font-size: 100%;
+}
+img{
+    max-width: 100%;
+    vertical-align: bottom;
+}
+a{
+    text-decoration:none ;
+    display: block;
+    color: var(--black);
+}
+li{
+    list-style: none;
+}
+#header{
+    height: 100px;
+    background-color: var(--black);
+    color: var(--yellow);
+   font-size: 1.4rem;
+   display: flex;
+   flex-wrap: wrap;
+   z-index: 2;
+   position: fixed;
+   width: 100%;
+}
+#header .site-title{
+    line-height: 100px;
+   text-align: center;
+   max-width: 650px;
+   width: 100%;
+   font-family: 'Noto Serif JP', serif;
+}
+#header .header-image{
+    margin: 0 auto;
+    width: 40%;
+
+}
+#header .header-image ul{
+    display: flex;
+    align-items: center; 
+    /* 上のきいてない！？ */
+}
+#header .header-image ul li{
+    list-style: none;
+    width:23% ;
+    margin-left:2% ;
+    text-align: center;
+}
+#header .header-image ul li img{
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    width: 80px;
+
+}
+.site-image{
+    height:calc(100vh - 100px);
+    width: 100%;
+    position: relative;
+    top: 100px;
+}
+.site-logo{
+    position: absolute;
+    left: 0;
+    right: 0;
+    /* 真ん中にならないんです.... */
+    top: 40%;
+    height: 20%;
+    border-radius: 50%;
+}
+.btn{
+    font-size: 1.2rem;
+    padding:30px 25px ;
+     display: inline-block;
+     animation: anime 12s infinite;
+     color:var(--black);
+ }
+ @keyframes anime{
+    0% (background-color:#ffff66;);
+    16% (background-color:#ffcc66;);
+    33% (background-color:#ff9966;);
+    49% (background-color:#ff6666;);
+    65% (background-color:#ff9966;);
+    78% (background-color:#ffcc66;);
+    100% (background-color:#ffff66;);
+ }
+.content{
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 70px;
+}
+main{
+    width: 68%;
+}
+main #item .youtube{
+    padding: 30px 30px;
+}
+main #item{
+    margin-bottom: 50px;
+}
+main #item .player,main #item .players{
+    background-image: linear-gradient(transparent 50%,var(--yellow) 50%);
+    display: inline-block;
+}
+main #item .player:hover{
+    background-image: linear-gradient(transparent 50%,#ff99cc 50%);
+}
+main #item .player:active{
+    opacity: 0.7;
+}
+.section-title{
+    background-color: var(--black);
+    color: var(--yellow);
+    font-size: 1.3rem;
+    height: 40px;
+    padding: 5px 15px;
+    text-align: left;
+    font-family: 'Noto Serif JP', serif;
+}
+aside{
+    width: 22%;
+}
+aside .section-title{
+    clip-path: polygon(0 0, 100% 0%, 92% 100%, 0% 100%);
+}
+aside .season{
+    padding: 15px;
+  border: 1px solid var(--black);
+  border-radius: 5px;
+  position: sticky;
+  top: 110px;
+  outline: 1px solid var(--black) ;
+  outline-offset: 3px;
+}
+aside .season .season-title{
+    font-size: 1.3rem;
+    padding: 10px;
+}
+aside .season ul{
+    padding: 15px;
+}
+aside .season ul li{
+    display: flex;
+    border-bottom: 1px dashed var(--black);
+    line-height: 2;
+    font-size: 1.3rem;
+}
+aside .season ul li::before{
+  content: "";
+  margin: 14px 10px 0 0;
+  display: inline-block;
+  background-color: var(--yellow);
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+}
+aside .season ul li a:hover{
+    color: var(--yellow);
+    text-decoration: underline;
+}
+#footer{
+  background-color: var(--black);
+  height: 300px;
+  color: var(--yellow);
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+#footer .footer-title{
+    font-size: 2rem;
+    text-align: center;
+    padding-top: 30px;
+}
+#footer .writer{
+  width: 40%;
+  border-right: var(--white) 1px solid;
+  padding:0 50px;
+}
+#footer .writer .writer-detail{
+   padding-top: 20px;
+}
+#footer .writer .writer-detail img{
+    border-radius: 50%;
+    height: 120px;
+    float: left;
+    shape-outside: circle();
+    padding-right: 15px;
+}
+#footer .writer .writer-detail p{
+    font-size: 18px;
+}
+#footer .relating-site{
+    width: 60%;
+    padding: 0 50px;
+}
+#footer .relating-site .site-detail{
+    display: flex;
+}
+#footer .relating-site .site-detail-item{
+    width: 23%;
+    text-align: center;
+    padding-right: 2%;
+}
+#footer .relating-site .site-detail-item img{
+    height: 120px;
+    padding-bottom: 10px;
+}
+#footer .relating-site .site-detail-item a{
+    color: var(--yellow);
+    font-size: 15px;
+
+}
+#footer .relating-site .site-detail-item:hover{
+    opacity: 0.7;
+    text-decoration: underline;
+}
