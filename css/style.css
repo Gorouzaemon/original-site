@@ -43,8 +43,8 @@ li{
 }
 #header .header-image ul{
     display: flex;
-    align-items: center; 
-    /* 上のきいてない！？ */
+    height: 100px;
+    align-items: center;
 }
 #header .header-image ul li{
     list-style: none;
@@ -59,22 +59,29 @@ li{
     width: 80px;
 
 }
-.site-image{
+.mainvisual{
+    margin-bottom: 50px;
+}
+.mainvisual .site-image{
     height:calc(100vh - 100px);
     width: 100%;
     position: relative;
     top: 100px;
 }
-.site-logo{
+.mainvisual .site-logo{
     position: absolute;
     left: 0;
     right: 0;
-    /* 真ん中にならないんです.... */
-    top: 40%;
-    height: 20%;
+    top: 0;
+    bottom: 0;
+    height: 30%;
     border-radius: 50%;
+    margin: auto;
 }
-.btn{
+.intro{
+
+}
+.intro .btn{
     font-size: 1.2rem;
     padding:30px 25px ;
      display: inline-block;
@@ -82,13 +89,11 @@ li{
      color:var(--black);
  }
  @keyframes anime{
-    0% (background-color:#ffff66;);
-    16% (background-color:#ffcc66;);
-    33% (background-color:#ff9966;);
-    49% (background-color:#ff6666;);
-    65% (background-color:#ff9966;);
-    78% (background-color:#ffcc66;);
-    100% (background-color:#ffff66;);
+    0% {background-color:#ffff66;}
+    25% {background-color:#ffcc66;}
+    50% {background-color:#ff9966;}
+    75% {background-color:#ffcc66;}
+    100% {background-color:#ffff66;}
  }
 .content{
     justify-content: space-between;
@@ -137,7 +142,7 @@ aside .season{
   border: 1px solid var(--black);
   border-radius: 5px;
   position: sticky;
-  top: 110px;
+  top: 130px;
   outline: 1px solid var(--black) ;
   outline-offset: 3px;
 }
@@ -178,15 +183,12 @@ aside .season ul li a:hover{
 #footer .footer-title{
     font-size: 2rem;
     text-align: center;
-    padding-top: 30px;
+    padding: 30px 0;
 }
 #footer .writer{
   width: 40%;
   border-right: var(--white) 1px solid;
   padding:0 50px;
-}
-#footer .writer .writer-detail{
-   padding-top: 20px;
 }
 #footer .writer .writer-detail img{
     border-radius: 50%;
@@ -204,11 +206,12 @@ aside .season ul li a:hover{
 }
 #footer .relating-site .site-detail{
     display: flex;
+    width: 100%;
+    justify-content: space-between;
 }
 #footer .relating-site .site-detail-item{
     width: 23%;
     text-align: center;
-    padding-right: 2%;
 }
 #footer .relating-site .site-detail-item img{
     height: 120px;
