@@ -61,7 +61,7 @@ li{
 }
 .mainvisual{
     margin-bottom: 50px;
-    height: calc(100vh - 100px);
+    height: calc(100vh);
 }
 .mainvisual .site-image{
     height:calc(100vh - 100px);
@@ -83,7 +83,13 @@ li{
     margin: auto;
 }
 .intro{
-
+    max-width: 1400px;
+    margin: 0 auto;
+    text-align: center;
+}
+.intro p{
+  font-size: 25px;
+  padding-bottom: 30px;
 }
 .intro .btn{
     font-size: 1.2rem;
@@ -91,6 +97,8 @@ li{
      display: inline-block;
      animation: anime 12s infinite;
      color:var(--black);
+     font-weight:600 ;
+    
  }
  @keyframes anime{
     0% {background-color:#ffff66;}
@@ -102,10 +110,10 @@ li{
 .content{
     justify-content: space-between;
     max-width: 1200px;
-    margin: 0 auto;
+    margin: 70px auto;
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 70px;
+
 }
 main{
     width: 68%;
@@ -115,6 +123,9 @@ main #item .youtube{
 }
 main #item{
     margin-bottom: 50px;
+}
+main #item span{
+    font-weight: bold;
 }
 main #item .player,main #item .players{
     background-image: linear-gradient(transparent 50%,var(--yellow) 50%);
@@ -199,7 +210,7 @@ aside .season ul li a:hover{
     height: 120px;
     float: left;
     shape-outside: circle();
-    padding-right: 15px;
+    padding-right: 25px;
 }
 #footer .writer .writer-detail p{
     font-size: 18px;
