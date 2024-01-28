@@ -61,12 +61,16 @@ li{
 }
 .mainvisual{
     margin-bottom: 50px;
+    height: calc(100vh - 100px);
 }
 .mainvisual .site-image{
     height:calc(100vh - 100px);
     width: 100%;
     position: relative;
     top: 100px;
+}
+.mainvisual .site-image img{
+    object-fit: cover;
 }
 .mainvisual .site-logo{
     position: absolute;
