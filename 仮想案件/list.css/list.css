@@ -9,6 +9,9 @@ img{
     max-width: 100%;
     vertical-align: bottom;
 }
+p{
+    color: #000;
+}
 li{
     list-style: none;
 }
@@ -62,24 +65,19 @@ header ol li{
   font-size: 15px;
   margin-right: 7px;
 }
-header ol li:nth-child(1){
+header ol li:nth-child(1),li:nth-child(2){
     color: #0000FF;
 }
-.mainvisual img{
-    width:100% ;
-    object-fit: cover;
-    height: 450px;
-    margin-bottom: 100px;
-}
 .container .title{
-    font-size:30px ;
-    margin-bottom:30px ;
+    font-size:40px ;
+    margin-top: 30px;
 }
 .container .staffs{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     width: 100%;
+    margin:0 0 100px 0;
 }
 .container .staffs .item{
     width: 28%;
@@ -94,12 +92,12 @@ header ol li:nth-child(1){
     left: -20px;
 }
 .container .staffs .item .img{
-    text-align: center;
-    display: block;
+  text-align: center;
+  display: block;
 }
 .container .staffs .item .img img{
     border-radius: 50%;
-    height: 200px;
+    height: 210px;
     object-fit: cover;
     border: 10px solid #EEEEEE;
 }
@@ -142,42 +140,56 @@ header ol li:nth-child(1){
     height: 1px;
     transform: rotate(40deg);
 }
-.container .list{
-    padding-top: 60px;
-    text-align: center;
+.nextprev{
+    display: flex;
+    justify-content: space-between;
+    border-top: 5px solid #00EE00;
+    border-bottom: 5px solid #00EE00;
+    margin: 50px 0;
+    align-items: center;
 }
-.container .list .listbtn{
-    background-color: #66CC66	;
-    color:#fff ;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   width: 300px;
-   height: 50px;
-   font-weight: bold;
-   border-radius: 10px;
-   position: relative;
-   padding-right: 50px;
-   margin: 0 auto;
+.nextprev .next,.prev{
+    padding: 10px 60px;
+    position: relative;
 }
-.container .list .listbtn::after{
+
+.nextprev .prev::before{
     content: "";
-    position: absolute;
-    top: 53%;
-    right: 48px;
-    background-color: #fff;
-    width: 15px;
+    width: 25px;
     height: 1px;
+    background-color: #000;
+    position: absolute;
+    top: 27px;
+    left: 25px;
+}
+.nextprev .prev::after{
+    content: "";
+    width:13px ;
+    height: 1px;
+    background-color: #000;
+    position: absolute;
+    top:22px;
+    left: 23px;
+    transform: rotate(-40deg);
+}
+.nextprev .next::before{
+    content: "";
+    width: 25px;
+    height: 1px;
+    background-color: #000;
+    position: absolute;
+    top: 27px;
+    right: 25px;
+}
+.nextprev .next::after{
+    content: "";
+    width:13px ;
+    height: 1px;
+    background-color: #000;
+    position: absolute;
+    top:22px;
+    right: 23px;
     transform: rotate(40deg);
-}
-.container .list .listbtn::before{
-    content: "";
-    width: 40px;
-    height: 1px;
-    background-color: #fff;
-    position: absolute;
-    top: 33px;
-    right:50px ;
 }
 .container .banner-list{
     display: flex;
